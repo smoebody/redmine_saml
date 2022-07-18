@@ -75,7 +75,7 @@ module RedmineSaml
           raise "RedmineSaml.configure requires saml.#{k} to be set" unless saml[k]
         end
 
-        unless saml[:idp_cert_fingerprint] || saml[:idp_cert]
+        unless saml[:idp_cert_fingerprint] || saml[:idp_cert] || saml[:idp_cert_multi]
           raise 'RedmineSaml.configure requires either saml.idp_cert_fingerprint or saml.idp_cert to be set'
         end
 
