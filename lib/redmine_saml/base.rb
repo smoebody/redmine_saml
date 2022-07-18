@@ -67,9 +67,7 @@ module RedmineSaml
       def validate_configuration!
         %i[assertion_consumer_service_url
            issuer
-           idp_sso_target_url
            name_identifier_format
-           idp_slo_target_url
            name_identifier_value
            attribute_mapping].each do |k|
           raise "RedmineSaml.configure requires saml.#{k} to be set" unless saml[k]
